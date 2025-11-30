@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center;">Animal Fun</h1>
+    <div id="root"></div>
+    <script type="text/babel">
+        function Animal({name , sound}) {
+          return (
+        <button onClick={() => alert(`${name} says ${sound}!`)} style={{margin: "16px",fontSize:"20px"}}>
+        {name}
+            </button>
+          ); }
+          function App() {
+          return (
+          <div style={{textAlign:"center"}}>
+          <Animal name="Dog" sound="Woof"/>
+          <Animal name="Cat" sound="Meow"/>
+          <Animal name="Cow" sound="Moooo"/>
+          </div>
+          ); }
+          ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+    </script>
+</body>
+</html>
